@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Find troubleshooting tips and contact SupperSprig support.">
+<meta name="theme-color" content="#f7f6ef">
+<title>SupperSprig Support</title>
+<style>
+  :root {
+    color-scheme: light;
+    --ink: #213829;
+    --muted: #45594b;
+    --paper: #f7f6ef;
+    --white: #fffefa;
+    --line: #d8dfd0;
+    --leaf: #dcead4;
+    --forest: #254a34;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-padding-top: 1rem; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font: 1rem/1.6 system-ui, sans-serif;
+  }
+  a { color: inherit; text-underline-offset: .22em; }
+  a:focus-visible, summary:focus-visible {
+    outline: 3px solid #a34b25;
+    outline-offset: 5px;
+  }
+  .wrap { width: min(100% - 2rem, 62rem); margin-inline: auto; }
+  .skip {
+    position: absolute;
+    left: 1rem;
+    top: .5rem;
+    padding: .5rem 1rem;
+    background: var(--white);
+    transform: translateY(-200%);
+  }
+  .skip:focus { transform: none; }
+  header .wrap, footer .wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .5rem 1.25rem;
+    padding-block: 1.15rem;
+  }
+  .brand { font-size: 1.2rem; font-weight: 750; letter-spacing: -.04em; }
+  nav { display: flex; flex-wrap: wrap; gap: 1.25rem; }
+  .hero {
+    border-radius: 1.8rem;
+    padding: clamp(1.5rem, 7vw, 4.75rem);
+    background: var(--leaf);
+  }
+  .hero p, .contact p { max-width: 49ch; }
+  h1, h2 {
+    font-family: Georgia, serif;
+    font-weight: 400;
+    line-height: 1.08;
+    letter-spacing: -.045em;
+    margin: 0;
+  }
+  h1 { font-size: clamp(2.65rem, 8vw, 5.7rem); }
+  h2 { font-size: clamp(2rem, 5vw, 3.2rem); }
+  p { margin: .85rem 0 0; }
+  .button {
+    display: inline-block;
+    margin-top: 1.35rem;
+    padding: .65rem 1.15rem;
+    border-radius: 3rem;
+    background: var(--forest);
+    color: var(--white);
+    font-weight: 650;
+    text-decoration: none;
+  }
+  .button:hover { text-decoration: underline; }
+  .panel {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.8fr);
+    gap: 1.25rem 2rem;
+    padding-block: clamp(2.5rem, 7vw, 4.5rem);
+  }
+  .questions { border-top: 1px solid var(--line); }
+  details { border-bottom: 1px solid var(--line); padding: 0 .25rem; }
+  summary { cursor: pointer; padding-block: .95rem; font-weight: 650; }
+  summary::marker { color: var(--forest); }
+  details p { margin: 0 0 1rem; color: var(--muted); }
+  .contact {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 1.5rem;
+    padding: clamp(1.4rem, 5vw, 3rem);
+  }
+  footer { color: var(--muted); font-size: .9rem; }
+  @media (max-width: 40rem) { .panel { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header>
+  <div class="wrap">
+    <span class="brand">SupperSprig</span>
+    <nav aria-label="Support navigation">
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap" id="main">
+  <section class="hero" aria-labelledby="title">
+    <h1 id="title">SupperSprig<br>Support</h1>
+    <p>Get help when the app isn’t working as expected, report a bug, or share an idea.</p>
+    <a class="button" href="#faq">Browse common questions</a>
+  </section>
+  <section class="panel" id="faq" aria-labelledby="faq-title">
+    <h2 id="faq-title">Common questions</h2>
+    <div class="questions">
+      <details>
+        <summary>What if SupperSprig freezes or closes unexpectedly?</summary>
+        <p>Close and reopen the app. If it still happens, check for an app update and restart your device. If the issue continues, tell us what you were doing when it happened.</p>
+      </details>
+      <details>
+        <summary>What should I include in a bug report?</summary>
+        <p>Include your device model, operating system version, SupperSprig version if available, and the steps that led to the issue. If you include a screenshot, crop out any personal information.</p>
+      </details>
+      <details>
+        <summary>How can I suggest a feature?</summary>
+        <p>Send us your idea and tell us what you were trying to do. An example of when you’d use it helps us understand what would make the app easier to use.</p>
+      </details>
+    </div>
+  </section>
+  <section class="contact" id="contact" aria-labelledby="contact-title">
+    <h2 id="contact-title">Contact support</h2>
+    <p>Tell us what happened or what you’d like help with.</p>
+    <!-- Replace support@example.com with your SupperSprig support address before publishing. -->
+    <a class="button" href="mailto:support@example.com?subject=SupperSprig%20Support">Email SupperSprig support</a>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <span>SupperSprig</span>
+    <a href="#main">Back to top</a>
+  </div>
+</footer>
+</body>
+</html>
